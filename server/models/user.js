@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
 	email: {
 		type: String,
-		unique: true,
+		unique: true, //makes it so this cant let people use the same email
 		lowercase: true
 	},
 	password: String
