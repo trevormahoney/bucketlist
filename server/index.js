@@ -10,7 +10,6 @@ mongoose.connect('mongodb://localhost:bucket/bucket');
 
 //Middleware
 app.use(bodyParser.json({ type: '*/*'}));
-app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
 //Server

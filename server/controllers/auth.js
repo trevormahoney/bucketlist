@@ -38,3 +38,8 @@ exports.signup = function(req, res, next){
 	});
 }
 
+exports.signin = function(req, res, next){
+	//User has already had their email and pw auth'd
+	//we just need to five them a token
+	res.send({ token: createUserToken(req.user) });
+}
