@@ -7,7 +7,7 @@ class NavBarHeader extends Component {
 			<Navbar>
 		    <Navbar.Header>
 		      <Navbar.Brand>
-		        <a href="#">React-Bootstrap</a>
+		        <a href="#">BucketList</a>
 		      </Navbar.Brand>
 		    </Navbar.Header>
 		    <Nav>
