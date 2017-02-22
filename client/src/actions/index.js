@@ -1,20 +1,13 @@
-// //Action constant Names
-// const SELECT_BAND = 'SELECT_BAND';
+import axios from 'axios';
 
-// {
-// 	type: SELECT_BAND,
-// 	payload: band
-// }
+export const CREATE_POSTS = 'CREATE_POSTS';
 
-//Above was 12.5, below is 12.6
+const ROOT_URL = 'http://rest.learncode.academy/api/paul';
 
-const SELECT_BAND = 'SELECT_BAND';
-
-export function selectBand(band) {
-	//selectBand is an ActionCreator, it needs to return an action 
-	//which is an object that must have a type property
+export function createPost(props) {
+	const request = axios.post(`${ROOT_URL}/posts`, props);
 	return {
-		type: SELECT_BAND,
-		payload: band
+		type: CREATE_POSTS,
+		payload: request
 	};
 }

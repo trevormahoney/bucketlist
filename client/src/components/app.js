@@ -10,7 +10,6 @@ import Video from './video/video';
       				<NavBarHeader />
               {this.props.children}
       				<Video />
-              <Signin />
       			</div>
     			);
   		}
