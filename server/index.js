@@ -4,11 +4,13 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = require('./router');
 var mongoose = require('mongoose'); //mongoose is a library that allows you to communicate with a database more easily also called a URM
+var cors = require('cors');
 
 //DB connection
 mongoose.connect('mongodb://localhost:bucket/bucket');
 
 //Middleware
+app.use(cors());
 app.use(bodyParser.json({ type: '*/*'}));
 router(app);
 
