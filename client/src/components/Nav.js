@@ -9,8 +9,8 @@ class NavBarHeader extends Component {
 			return <NavItem href="#">Sign Out</NavItem>
 		}else{
 			return [
-				<NavItem key={1} href="#">Sign In</NavItem>,
-				<NavItem key={2} href="#">Sign Up</NavItem>
+				<NavItem key={1} href="/signin">Sign In</NavItem>,
+				<NavItem key={2} href="/signup">Sign Up</NavItem>
 			];
 		}
 	}
