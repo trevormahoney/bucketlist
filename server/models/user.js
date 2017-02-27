@@ -39,30 +39,6 @@ userSchema.methods.comparePassword = function(candidatePassword, callback){
 	});
 }
 
-////This isnt in the right place
-// var localLogin = new LocalStrategy(localOptions, function(email, password, done){
-// 	User.findOne({email: email},function(err, user){
-// 		//if there's an error in the search, return early with error object
-// 		if(err) { return done(err)};
-// 		//not an error, just user not found
-// 		if(!user) {return done(null, false); }
-
-// 		//compare passwords - is 'password' equal to user.password?
-// 		//compare pw from req with users saved pw
-// 		user.comparePassword(password, function(err, isMatch){
-// 			//if there was an error, return early.
-// 			if (err) { return done(err); }
-// 			//if it's not the same, it will return false and say they didn't match up.
-// 			if (!isMatch) { return done(null, false); }
-
-// 			//if same, it will call passport callback with user model
-// 			return done(null,user);
-// 		});
-// 		//tricky part -> we salted the password, and we need to somehow decode encrypted pw to normal pw.
-
-// 	})
-// 	//Otherwise, call done with false
-// })
 var model = mongoose.model('user', userSchema);
 
 module.exports = model;
