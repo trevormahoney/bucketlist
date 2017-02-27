@@ -14,7 +14,6 @@ const ROOT_URL = 'http://localhost:3000';
 var config = {
 	headers: { authorization: localStorage.getItem('token') }
 }
-// http://rest.learncode.academy/api/paul';
 
 export function signinUser({ email, password }){
 	return function(dispatch){

@@ -20,8 +20,7 @@ var BucketListSchema = new Schema({
 	},
 	specificUser: {
 		type: String,
-		default
+		default: ''
 	}
-})
-
+});
 module.exports = mongoose.model('BucketList', BucketListSchema);

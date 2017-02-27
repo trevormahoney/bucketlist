@@ -52,7 +52,7 @@ class ListItems extends Component {
 						</div>
 						<div className="col-sm-6 test-xs-right">
 							<Link to="/newitem" className="btn btn-primary">
-							Add a List Items
+								Add a List Item
 							</Link>
 						</div>
 					</div>

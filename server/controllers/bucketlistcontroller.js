@@ -1,3 +1,5 @@
+const BucketList = require('../models/bucketlist')
+
 exports.addBucketList = function(req, res, next){
 	//For postman use
 	//var title - req.body.title;
