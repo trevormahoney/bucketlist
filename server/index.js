@@ -7,7 +7,7 @@ var mongoose = require('mongoose'); //mongoose is a library that allows you to c
 var cors = require('cors');
 
 //DB connection
-mongoose.connect('mongodb://localhost:bucket/bucket');
+mongoose.connect('mongodb://trevormahoney:smmw876@ds137090.mlab.com:37090/bucketlistserver');
 
 //Middleware
 app.use(cors());
