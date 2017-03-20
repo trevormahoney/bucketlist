@@ -6,7 +6,9 @@ import {
 	UNAUTH_USER,
 	AUTH_ERROR,
 	CREATE_POSTS,
-	FETCH_POSTS
+	FETCH_POSTS,
+	FETCH_POST,
+	DELETE_POST
 } from './types';
 
 const ROOT_URL = 'http://localhost:3000';
@@ -86,5 +88,31 @@ export function fetchPosts() {
 					payload: response
 				});
 			});
+	}
+}
+
+export function fetchPost(id) {
+	return function(dispatch) {
+		axios.get(`${ROOT_URL}/items/${id}`, config)
+			.then( (response) => {
+				console.log("Response", response)
+				dispatch({
+					type: FETCH_POST,
+					payload: response
+				});
+			});
+	}
+}
+
+export function deletePost(id) {
+	return function(dispatch) {
+		axios.delete(`${ROOT_URL}/items/${id}`, config)
+		.then( (response) => {
+			dispatch({
+				type: DELETE_POST,
+				payload: response
+			});
+			browserHistory.push('/items');
+		});
 	}
 }
